@@ -1,0 +1,44 @@
+## **Original Client Requirements**
+
+The client envisions a chatbot that utilizes computer vision to provide mental wellness support. Users should be able to interact with the chatbot through a messaging interface. The chatbot will analyze images submitted by the user and provide tailored responses and suggestions based on the content of the image. The goal is to offer a non-judgmental, supportive space for users to explore their emotions and potentially identify patterns in their visual expressions that correlate with their mental state.  The chatbot should be able to detect basic emotions like happiness, sadness, anger, and fear, but also recognize objects and scenes that might be triggering or comforting to the user.  It should offer resources and coping mechanisms relevant to the detected emotions or identified triggers.  Privacy is paramount; all image data must be handled securely and with user consent. The chatbot should be accessible on multiple platforms (web, mobile).  It’s important that the chatbot feels empathetic and provides a sense of connection.  The system should be easy to use and understand, even for users who are not tech-savvy.  The chatbot should be able to learn and improve over time based on user interactions and feedback.  Integration with existing mental health resources (e.g., crisis hotlines, therapy directories) is desirable.  The chatbot should be able to handle a variety of image types (photos, screenshots, drawings).  Finally, the system needs to be robust and reliable, minimizing downtime and ensuring consistent performance.
+
+## **Refined Functional Requirements**
+
+**1. User Interface & Interaction**
+
+*   **FR1.1: Platform Support:** The chatbot shall be accessible via a web application and native mobile applications (iOS and Android).
+*   **FR1.2: Messaging Interface:** The chatbot shall utilize a standard messaging interface with clear visual cues for user input and chatbot responses.
+*   **FR1.3: User Authentication:** The system shall implement user authentication (e.g., email/password, social login) to ensure user privacy and personalized experience.
+*   **FR1.4: Image Upload:** The system shall allow users to upload images from their device’s gallery or take a new photo directly within the application.
+*   **FR1.5: Image Preview:** The system shall display a preview of the uploaded image to the user before processing.
+*   **FR1.6: Accessibility:** The UI shall adhere to WCAG 2.1 AA accessibility guidelines.
+
+**2. Computer Vision Analysis**
+
+*   **FR2.1: Emotion Detection:** The system shall detect the primary emotion present in an image with an accuracy of at least 75% (measured against a labeled test dataset). Supported emotions: Happiness, Sadness, Anger, Fear, Surprise, Neutral.
+*   **FR2.2: Object Recognition:** The system shall identify common objects and scenes within an image with an accuracy of at least 60% (measured against a labeled test dataset).  Categories: Faces, Nature, Buildings, Vehicles, Food, etc. (expandable).
+*   **FR2.3: Scene Recognition:** The system shall identify the scene depicted in an image (e.g., indoor, outdoor, beach, forest) with an accuracy of at least 65% (measured against a labeled test dataset).
+*   **FR2.4: Image Quality Handling:** The system shall gracefully handle low-resolution or blurry images, attempting to extract relevant information while minimizing errors.
+*   **FR2.5:  Trigger Detection:** The system shall identify potentially triggering images (e.g., images associated with past trauma – *Note: This requires careful ethical consideration and user consent*) with a confidence score above 80%.
+
+**3. Chatbot Responses & Support**
+
+*   **FR3.1: Empathetic Responses:** The chatbot shall provide responses that demonstrate empathy and understanding based on the detected emotion and identified triggers.
+*   **FR3.2: Coping Mechanism Suggestions:** Based on the detected emotion and triggers, the chatbot shall suggest relevant coping mechanisms (e.g., breathing exercises, mindfulness techniques, journaling prompts).  A library of 20+ coping mechanisms shall be implemented.
+*   **FR3.3: Resource Provision:** The chatbot shall provide links to relevant mental health resources, including crisis hotlines, therapy directories, and educational materials.  A database of at least 50 resources shall be maintained.
+*   **FR3.4:  Personalized Recommendations:** The chatbot shall learn user preferences and tailor recommendations accordingly (e.g., preferred coping mechanisms, types of resources).
+*   **FR3.5:  Conversation Flow:** The chatbot shall maintain a coherent and natural conversation flow, handling user input and providing appropriate responses.
+
+**4. Data Security & Privacy**
+
+*   **FR4.1: Data Encryption:** All image data and user information shall be encrypted both in transit and at rest.
+*   **FR4.2: User Consent:** The system shall require explicit user consent before processing any images.
+*   **FR4.3: Data Anonymization:**  Where possible, user data shall be anonymized to protect user privacy.
+*   **FR4.4: Compliance:** The system shall comply with all relevant data privacy regulations (e.g., GDPR, CCPA).
+
+**5. System Administration & Monitoring**
+
+*   **FR5.1:  Analytics Dashboard:** An administrator dashboard shall provide insights into chatbot usage, emotion detection accuracy, and user engagement.
+*   **FR5.2:  Model Retraining:** The system shall provide a mechanism for retraining the computer vision models with new data to improve accuracy and expand capabilities.
+*   **FR5.3:  Error Logging:** The system shall log all errors and exceptions for debugging and troubleshooting.
+*   **FR5.4:  System Health Monitoring:** The system shall monitor its own health and performance, alerting administrators to any issues.
