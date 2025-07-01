@@ -1,0 +1,11 @@
+Okay, I understand. I will meticulously review the System Design Document (SDD) for the mental wellness chatbot, focusing on technical accuracy, structure, completeness, scalability, security, and feasibility. I will then provide detailed feedback using the specified format and conclude with a score and status. Let's begin.
+
+Current Task: You are the Technical Reviewer. Review the System Design Document (SDD) for Create a chatbot for mental wellness.
+Evaluate: - Design depth and technical accuracy - Logical structure, completeness, integration flow - Scalability, security, and implementation feasibility
+Provide feedback using the exact structure:
+### Strengths: - ...
+### Issues: - ...
+### Suggestions: - ...
+Then summarize with:
+### Score: X/10
+### Status: Final Document ✅ or Needs Improvement 🔁

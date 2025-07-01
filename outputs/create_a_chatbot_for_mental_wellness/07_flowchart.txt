@@ -1,0 +1,12 @@
+```mermaid
+graph LR
+    A[User] --> B(Chatbot Interface);
+    B --> C{Input/Query};
+    C --> D[NLP Engine];
+    D --> E{Intent Recognition};
+    E --> F[Response Generator];
+    F --> B;
+    G[Knowledge Base] --> F;
+    H[User Feedback] --> I[Model Training];
+    I --> D;
+```
