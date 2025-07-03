@@ -1,0 +1,53 @@
+## Original Client Requirements
+
+## Refined Functional Requirements
+
+**1. Chatbot Core Functionality**
+
+*   **FR1.1: Text Input & Processing:** The chatbot shall accept text input from the user via a text-based interface (e.g., chat window). The chatbot shall process the input to identify the user’s intent and relevant keywords.
+*   **FR1.2: Intent Recognition:** The chatbot shall accurately identify the user’s intent from their text input, utilizing Natural Language Understanding (NLU) techniques. Supported intents include:
+    *   Seeking advice (general or specific)
+    *   Expressing feelings (e.g., sadness, anxiety, frustration)
+    *   Casual conversation/chit-chat
+    *   Requesting resources (e.g., helpline numbers, websites)
+    *   Reporting a crisis situation
+*   **FR1.3: Response Generation:** The chatbot shall generate appropriate responses based on the identified intent and context. Responses shall be empathetic, supportive, and non-judgmental.
+*   **FR1.4: Conversation History:** The chatbot shall maintain a conversation history for each user session, allowing it to recall previous interactions and provide more personalized responses. The history should be limited to a configurable number of previous turns (e.g., 5-10 turns) to manage memory usage.
+
+**2. Topic Coverage & Knowledge Base**
+
+*   **FR2.1: Mental Wellness Topics:** The chatbot shall be knowledgeable about a range of mental wellness topics, including but not limited to: anxiety, depression, stress management, self-care, mindfulness, and coping mechanisms.
+*   **FR2.2: Resource Database:** The chatbot shall maintain a database of relevant mental health resources, including:
+    *   Crisis hotlines (with direct links and phone numbers)
+    *   Mental health websites (with descriptions and links)
+    *   Support groups (with contact information)
+*   **FR2.3: Content Updates:** The resource database shall be updated regularly (at least quarterly) to ensure accuracy and relevance.
+
+**3. Crisis Detection & Intervention**
+
+*   **FR3.1: Crisis Keyword Detection:** The chatbot shall be able to detect keywords and phrases indicative of a crisis situation (e.g., suicidal thoughts, self-harm, harm to others).
+*   **FR3.2: Immediate Support Response:** Upon detecting a potential crisis, the chatbot shall immediately respond with a supportive message and offer immediate help, including:
+    *   Providing contact information for crisis hotlines (e.g., Suicide Prevention Lifeline, Crisis Text Line)
+    *   Suggesting immediate actions the user can take (e.g., reach out to a trusted friend or family member)
+*   **FR3.3: Escalation Protocol:** The chatbot shall have a defined escalation protocol for handling crisis situations, potentially involving notifying a human moderator or providing information to emergency services (with appropriate safeguards and user consent where possible).
+
+**4. User Experience & Interface**
+
+*   **FR4.1: 24/7 Availability:** The chatbot shall be available 24 hours a day, 7 days a week.
+*   **FR4.2: User-Friendly Interface:** The chatbot’s interface shall be intuitive and easy to use, with clear instructions and a simple chat window.
+*   **FR4.3: Tone & Style:** The chatbot’s tone shall be empathetic, supportive, and non-judgmental.  It should avoid using overly technical language.
+*   **FR4.4: Error Handling:** The chatbot shall gracefully handle unexpected input or errors, providing informative messages to the user.
+
+**5. Security & Privacy**
+
+*   **FR5.1: Data Encryption:** All user data shall be encrypted both in transit and at rest.
+*   **FR5.2: Privacy Policy:** The chatbot shall adhere to a clear and comprehensive privacy policy, outlining how user data is collected, used, and protected.  The policy must be easily accessible to the user.
+*   **FR5.3: Anonymization:** Where possible, user data should be anonymized to protect user privacy.
+
+**6. Learning & Improvement (Future Enhancement)**
+
+*   **FR6.1: Feedback Mechanism:** The chatbot shall provide a mechanism for users to provide feedback on its responses (e.g., thumbs up/down).
+*   **FR6.2: Response Analysis:** The chatbot’s responses shall be analyzed periodically to identify areas for improvement.
+*   **FR6.3: Model Retraining:** The chatbot’s underlying NLU model shall be retrained periodically using user feedback and conversation data to improve its accuracy and effectiveness.
+
+---
