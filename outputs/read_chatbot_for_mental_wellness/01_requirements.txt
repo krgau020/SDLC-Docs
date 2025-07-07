@@ -1,43 +1,51 @@
 **Original Client Requirements**
 
-The client wants a chatbot that can help people with their mental wellness. It should be able to read text that users type in, understand what they’re saying, and respond in a helpful way. It needs to be able to offer basic support, like acknowledging feelings and suggesting relaxation techniques. It should also be able to provide links to external resources if needed. The chatbot should be friendly and non-judgmental. It’s important that the chatbot doesn’t give medical advice, but rather offers supportive information and directs users to professional help when necessary. The chatbot should be easy to use and accessible on different devices.  It should also be able to remember previous conversations to provide more personalized support.  Ideally, it would be able to detect if a user is in crisis and immediately offer resources for immediate help.  The chatbot should be available 24/7.  Finally, the client wants to track how often the chatbot is used and what topics users are discussing to improve its effectiveness.
-
 **Refined Functional Requirements**
 
-**1. Chatbot Core Functionality**
+**1. Introduction**
 
-1.1. **Text Input & Processing:** The chatbot shall accept text input from the user via a text-based interface (e.g., chat window). The chatbot shall utilize Natural Language Processing (NLP) to analyze the user’s input.
-1.2. **Intent Recognition:** The chatbot shall accurately identify the user’s intent from their text input.  This includes, but is not limited to: expressing sadness, anxiety, stress, loneliness, seeking relaxation techniques, requesting information about mental health resources, and indicating a crisis situation.
-1.3. **Response Generation:** Based on the identified intent, the chatbot shall generate a relevant and appropriate response. Responses shall be crafted to be empathetic, supportive, and non-judgmental.
-1.4. **Contextual Awareness:** The chatbot shall maintain context throughout the conversation, referencing previous turns to provide more personalized and coherent responses.  A conversation history of at least 5 turns shall be maintained.
-1.5. **Fallback Response:** If the chatbot cannot understand the user’s input or determine the intent, it shall provide a polite and helpful fallback response, such as “I’m sorry, I didn’t quite understand. Could you please rephrase your question?” or “I’m still learning.  Could you tell me more about what you’re experiencing?”
+*   **1.1 Purpose:** This document outlines the functional requirements for a mental wellness chatbot designed to provide supportive conversation, resource information, and personalized engagement tracking.
+*   **1.2 Scope:** This chatbot will focus on providing empathetic support, information related to common mental wellness topics, and guidance to professional resources. It will *not* provide medical diagnoses or treatment advice.
+*   **1.3 Target Users:** Individuals seeking support for their mental wellness, including those experiencing anxiety, depression, stress, or seeking self-care strategies.
 
-**2. Support & Information Provision**
+**2. Functional Requirements**
 
-2.1. **Basic Support:** The chatbot shall offer general support by acknowledging the user’s feelings (e.g., “That sounds difficult,” “I’m here to listen”).
-2.2. **Relaxation Techniques:** The chatbot shall provide access to a library of relaxation techniques, including (but not limited to): deep breathing exercises, mindfulness prompts, progressive muscle relaxation scripts, and guided imagery.  The chatbot shall offer at least 5 different relaxation techniques.
-2.3. **Resource Links:** The chatbot shall provide links to reputable external mental health resources, including: crisis hotlines (e.g., Suicide Prevention Lifeline, Crisis Text Line), mental health organizations (e.g., National Alliance on Mental Illness, Mental Health America), and online therapy platforms.  Links shall be clearly displayed and easily accessible.
-2.4. **Disclaimer:** The chatbot shall prominently display a disclaimer stating that it does not provide medical advice and that users should consult with a qualified healthcare professional for any mental health concerns.
+*   **2.1 Natural Language Understanding (NLU):**
+    *   **FR-NLU-001:** The chatbot shall accurately interpret user input expressed in natural language.
+    *   **FR-NLU-002:** The chatbot shall be able to identify the *intent* of the user’s message (e.g., seeking advice, expressing feelings, requesting information, initiating casual conversation).  Intent recognition accuracy shall be at least 85%.
+    *   **FR-NLU-003:** The chatbot shall be able to extract relevant *entities* from user input (e.g., specific emotions – “sad,” “anxious,” “happy”; mental health topics – “anxiety,” “depression,” “stress,” “self-care”).
+*   **2.2 Conversation Management:**
+    *   **FR-CM-001:** The chatbot shall maintain context throughout the conversation, remembering previous turns and user preferences.
+    *   **FR-CM-002:** The chatbot shall be able to handle interruptions and changes in topic gracefully.
+    *   **FR-CM-003:** The chatbot shall provide appropriate responses based on the identified intent and entities, utilizing a pre-defined knowledge base and conversational flows.
+    *   **FR-CM-004:** The chatbot shall offer a variety of response types (e.g., text, links to resources, prompts for reflection).
+*   **2.3 Content & Knowledge Base:**
+    *   **FR-KB-001:** The chatbot shall contain information on common mental wellness topics, including anxiety, depression, stress, and self-care techniques.
+    *   **FR-KB-002:** The chatbot shall provide links to reputable external resources, such as crisis hotlines, mental health organizations, and therapy directories. (Minimum of 5 resources).
+    *   **FR-KB-003:** The chatbot shall *explicitly state* that it is not a substitute for professional medical advice and encourage users to seek help from a qualified healthcare provider when needed.
+*   **2.4 User Engagement & Tracking:**
+    *   **FR-ET-001:** The chatbot shall track user sessions, including start time, end time, and number of messages exchanged.
+    *   **FR-ET-002:** The chatbot shall track user intent categories (e.g., seeking advice, expressing feelings).
+    *   **FR-ET-003:** The chatbot shall provide an aggregated, anonymized report of user engagement metrics to the system administrator (e.g., total sessions, most frequent intents, average session duration).  Data privacy and user anonymity must be maintained.
+*   **2.5 Platform & Accessibility:**
+    *   **FR-PA-001:** The chatbot shall be accessible via a web interface and a mobile application (iOS and Android).
+    *   **FR-PA-002:** The chatbot interface shall adhere to accessibility guidelines (e.g., WCAG 2.1) to ensure usability for users with disabilities.
 
-**3. Crisis Detection & Intervention**
+**3. Non-Functional Requirements**
 
-3.1. **Crisis Keyword Detection:** The chatbot shall be programmed to detect keywords and phrases indicative of a crisis situation (e.g., “I want to die,” “I’m going to hurt myself,” “I feel hopeless”).
-3.2. **Immediate Response:** Upon detecting a crisis keyword, the chatbot shall immediately respond with a message offering support and directing the user to relevant crisis resources.  The response shall include contact information for crisis hotlines and emergency services.
-3.3. **Safety Protocol:** The chatbot shall be designed to prioritize user safety.  If a user expresses intent to harm themselves or others, the chatbot shall immediately provide crisis resources and, if possible, attempt to gather more information about the user’s situation.
+*   **3.1 Performance:**
+    *   **NFR-PER-001:** The chatbot shall respond to user input within 2 seconds.
+*   **3.2 Security:**
+    *   **NFR-SEC-001:** User data shall be stored securely and in compliance with relevant privacy regulations (e.g., GDPR, HIPAA – if applicable).
+*   **3.3 Usability:**
+    *   **NFR-USE-001:** The chatbot interface shall be intuitive and easy to use.
+*   **3.4 Maintainability:**
+     * **NFR-MNT-001:** The chatbot’s code and knowledge base shall be well-documented and modular for ease of maintenance and updates.
 
-**4. User Interface & Accessibility**
+**4. Future Considerations (Out of Scope for Initial Release)**
 
-4.1. **Device Compatibility:** The chatbot shall be accessible and functional on a variety of devices, including desktop computers, tablets, and smartphones.
-4.2. **Responsive Design:** The chatbot interface shall be responsive and adapt to different screen sizes.
-4.3. **Accessibility:** The chatbot shall adhere to accessibility guidelines (e.g., WCAG) to ensure usability for users with disabilities.  This includes providing alternative text for images, ensuring sufficient color contrast, and supporting keyboard navigation.
+*   Personalized recommendations based on user history.
+*   Integration with wearable devices for mood tracking.
+*   Multilingual support.
 
-**5. Analytics & Reporting**
-
-5.1. **Usage Tracking:** The chatbot shall track the number of user sessions, the frequency of use, and the types of topics discussed.
-5.2. **Topic Analysis:** The chatbot shall analyze the topics discussed to identify trends and areas where users may need additional support.
-5.3. **Reporting Dashboard:** A reporting dashboard shall be provided to the client, displaying key metrics and insights related to chatbot usage and user needs.  The dashboard shall be accessible via a secure web interface.
-
-**6. Conversation Memory**
-
-6.1. **Session Persistence:** The chatbot shall maintain conversation history for each user session.
-6.2. **Data Privacy:** All conversation data shall be stored securely and in compliance with relevant privacy regulations (e.g., GDPR, HIPAA – depending on implementation). User data will be anonymized where possible.
+---
