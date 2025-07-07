@@ -1,0 +1,50 @@
+**Original Client Requirements**
+
+The client envisions a chatbot, "Wait," designed to help users manage anxiety and difficult emotions. Users should be able to initiate conversations with the chatbot at any time, and it should offer immediate support and guidance. The chatbot should be able to recognize keywords related to anxiety, stress, sadness, and other negative emotions. It should provide coping mechanisms, relaxation techniques, and resources for further support. The chatbot needs to be empathetic and non-judgmental. It should be available 24/7. The chatbot should be able to track user sessions and provide personalized recommendations based on past interactions. The client also wants the chatbot to integrate with existing mental health apps and services. Finally, the client wants to ensure user privacy and data security. The chatbot should be easy to use and accessible to a wide range of users, including those with limited technical skills. The chatbot should be able to escalate users to human support if needed. The client wants to measure the effectiveness of the chatbot through user feedback and session data. The chatbot should be engaging and maintain user interest. The client wants to explore the possibility of gamification to encourage consistent use.
+
+**Refined Functional Requirements**
+
+**1. User Interface & Interaction**
+
+*   **FR1.1: Chat Initiation:** The chatbot shall allow users to initiate a conversation via text-based chat interface accessible through a web application and a mobile application (iOS and Android).
+*   **FR1.2: Input Handling:** The chatbot shall accurately interpret user input, including text, and handle common misspellings and abbreviations.
+*   **FR1.3: Response Time:** The chatbot shall respond to user input within 3 seconds, with a maximum acceptable response time of 5 seconds.
+*   **FR1.4: Accessibility:** The chatbot interface shall adhere to WCAG 2.1 Level AA accessibility guidelines.
+*   **FR1.5: Visual Feedback:** The chatbot shall provide visual feedback to the user during conversation (e.g., typing indicator, message bubbles).
+
+**2. Core Functionality - Emotional Recognition & Support**
+
+*   **FR2.1: Keyword Detection:** The chatbot shall identify keywords and phrases indicative of anxiety, stress, sadness, anger, and other common negative emotions (e.g., "I'm feeling overwhelmed," "I can't sleep," "I'm scared").  A list of 20+ keywords will be maintained and updated quarterly.
+*   **FR2.2: Empathetic Response:** The chatbot shall provide empathetic responses acknowledging the user's feelings (e.g., "That sounds really difficult," "I understand you're feeling stressed").
+*   **FR2.3: Coping Mechanism Suggestions:** The chatbot shall offer a selection of evidence-based coping mechanisms (e.g., deep breathing exercises, grounding techniques, progressive muscle relaxation) based on the identified emotion.  A library of 10+ coping mechanisms will be maintained.
+*   **FR2.4: Resource Provision:** The chatbot shall provide links to relevant external resources, including crisis hotlines, mental health organizations, and self-help websites.  A curated list of 5+ resources will be maintained.
+*   **FR2.5: Personalized Recommendations:** Based on the user’s history of conversations and identified emotional patterns, the chatbot shall provide personalized recommendations for coping mechanisms and resources.
+
+**3. Session Tracking & Personalization**
+
+*   **FR3.1: Session Logging:** The chatbot shall log each user session, including the timestamp, user input, chatbot responses, and identified emotions.
+*   **FR3.2: User Profile:** The chatbot shall maintain a user profile storing information such as preferred coping mechanisms, reported emotional patterns, and consent for data sharing.
+*   **FR3.3: Progress Tracking:** The chatbot shall provide users with a visual representation of their progress over time (e.g., frequency of use, identified emotional trends).
+
+**4. Escalation & Human Support**
+
+*   **FR4.1: Crisis Detection:** The chatbot shall detect indicators of a potential crisis (e.g., suicidal ideation, self-harm) based on user input.
+*   **FR4.2: Escalation Protocol:** Upon detecting a potential crisis, the chatbot shall immediately escalate the user to a human support representative (via text or phone).
+*   **FR4.3: Human Support Integration:** The chatbot shall integrate with a human support system (e.g., a live chat platform or a phone call service).
+
+**5. Integration & Reporting**
+
+*   **FR5.1: API Integration:** The chatbot shall provide an API for integration with existing mental health apps and services (e.g., meditation apps, mood trackers).
+*   **FR5.2: Usage Analytics:** The chatbot shall collect and report on key usage metrics, including session duration, frequency of use, and user engagement.
+*   **FR5.3: Feedback Collection:** The chatbot shall solicit user feedback on their experience through periodic surveys and prompts.
+
+**6. Security & Privacy**
+
+*   **FR6.1: Data Encryption:** All user data shall be encrypted both in transit and at rest.
+*   **FR6.2: HIPAA Compliance:** The chatbot shall comply with HIPAA regulations regarding the protection of patient health information (if applicable).
+*   **FR6.3: Privacy Policy:** The chatbot shall have a clear and accessible privacy policy outlining how user data is collected, used, and protected.
+
+**7.  Engagement & Gamification (Future Enhancement)**
+
+*   **FR7.1: Gamified Challenges:** The chatbot shall incorporate gamified challenges (e.g., streaks, badges) to encourage consistent use. (Phase 2)
+*   **FR7.2:  Personalized Goals:** The chatbot shall allow users to set personalized goals related to their mental wellness. (Phase 2)
