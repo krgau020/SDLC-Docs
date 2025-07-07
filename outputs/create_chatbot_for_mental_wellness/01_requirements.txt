@@ -1,63 +1,52 @@
 ## **Original Client Requirements**
 
+The client wants to create a chatbot that can help people with their mental wellness. It should be able to offer support and guidance, and potentially connect users with resources if needed. The chatbot should be friendly and approachable, and it should be available 24/7. Users should be able to talk to the chatbot about a variety of topics, such as stress, anxiety, and depression. The chatbot should also be able to provide users with relaxation techniques, such as meditation and deep breathing exercises.  It’s important that the chatbot doesn’t offer medical advice, but rather provides supportive information and directs users to professional help when necessary.  The chatbot should be easy to use and accessible on multiple platforms (web, mobile app).  We want to ensure user privacy and data security.  The chatbot should be able to personalize the experience based on user input and preferences.  Finally, we need analytics to track usage and identify areas for improvement.
+
 ## **Refined Functional Requirements**
 
-**1. Overall Goals & Objectives:**
+**1. User Interface & Accessibility**
 
-*   **FR1.1:** The chatbot shall provide accessible and supportive mental wellness assistance to users 24/7.
-*   **FR1.2:** The chatbot shall improve user’s self-awareness and coping skills related to mental wellbeing.
-*   **FR1.3:** The chatbot shall offer immediate support and resources during mental health crises.
-*   **FR1.4:** The chatbot shall maintain user privacy and data security adhering to relevant regulations (e.g., GDPR, HIPAA - depending on target audience and location).
+*   **FR1.1: Platform Support:** The chatbot shall be accessible via a web application and a native mobile application (iOS and Android).
+*   **FR1.2: Responsive Design:** The web application shall utilize a responsive design to ensure optimal viewing and functionality across various screen sizes (desktop, tablet, mobile).
+*   **FR1.3: Accessibility Compliance:** The chatbot shall adhere to WCAG 2.1 Level AA accessibility guidelines, including support for screen readers, keyboard navigation, and sufficient color contrast.
+*   **FR1.4: User-Friendly Interface:** The chatbot interface shall be intuitive and easy to navigate, with clear prompts and instructions.
 
-**2. User Interaction & Functionality:**
+**2. Conversation Management & Natural Language Processing (NLP)**
 
-*   **FR2.1:** The chatbot shall initiate a conversation with a welcoming and non-judgmental greeting.
-*   **FR2.2:** The chatbot shall support natural language understanding (NLU) to interpret user input, including variations in phrasing and sentiment.
-*   **FR2.3:** The chatbot shall provide responses in a conversational and empathetic tone, avoiding overly clinical language.
-*   **FR2.4:** The chatbot shall offer a range of pre-defined responses addressing common mental wellness topics, including:
-    *   **FR2.4.1:** Stress management techniques (e.g., deep breathing, mindfulness exercises).
-    *   **FR2.4.2:** Anxiety reduction strategies.
-    *   **FR2.4.3:** Mood tracking and journaling prompts.
-    *   **FR2.4.4:** Information about common mental health conditions (e.g., depression, anxiety disorders). *Note: This information should be presented as educational and not as a diagnosis.*
-*   **FR2.5:** The chatbot shall allow users to express their feelings and emotions freely without fear of judgment.
-*   **FR2.6:** The chatbot shall provide personalized recommendations based on user input and mood tracking data (if integrated).
-*   **FR2.7:** The chatbot shall support multi-turn conversations, maintaining context and remembering previous interactions.
+*   **FR2.1: Intent Recognition:** The chatbot shall accurately identify user intents from natural language input (e.g., “I’m feeling anxious,” “I need help with stress”).  Accuracy shall be measured by a minimum F1-score of 0.85 on a test dataset of 1000 utterances.
+*   **FR2.2: Entity Extraction:** The chatbot shall extract relevant entities from user input, such as emotions (e.g., “sad,” “angry”), topics (e.g., “work,” “relationships”), and timeframes (e.g., “today,” “last week”).
+*   **FR2.3: Dialogue Flow Management:** The chatbot shall maintain a coherent and logical dialogue flow based on user input and identified intents.
+*   **FR2.4: Fallback Mechanism:**  If the chatbot cannot understand the user’s input, it shall provide a helpful fallback response (e.g., “I’m sorry, I didn’t understand. Could you please rephrase your question?”) and offer alternative options.
 
-**3. Crisis Detection & Support:**
+**3. Mental Wellness Support Features**
 
-*   **FR3.1:** The chatbot shall utilize sentiment analysis to detect indicators of a mental health crisis (e.g., suicidal ideation, self-harm).
-*   **FR3.2:** Upon detecting a potential crisis, the chatbot shall immediately offer support resources, including:
-    *   **FR3.2.1:** Contact information for crisis hotlines (e.g., Suicide Prevention Lifeline, Crisis Text Line).
-    *   **FR3.2.2:** Links to mental health organizations and websites.
-    *   **FR3.2.3:**  Option to connect with a human support professional (if available and integrated).
-*   **FR3.3:** The chatbot shall log all crisis detection events and user interactions for auditing and improvement purposes (while maintaining user privacy).
+*   **FR3.1: Mood Tracking:** The chatbot shall allow users to track their mood over time, recording daily or periodic mood entries.
+*   **FR3.2: Relaxation Techniques:** The chatbot shall provide guided relaxation techniques, including:
+    *   **FR3.2.1: Guided Meditation:** Offer a library of guided meditations of varying lengths (e.g., 5 minutes, 10 minutes, 20 minutes).
+    *   **FR3.2.2: Deep Breathing Exercises:** Guide users through various deep breathing exercises with visual and auditory cues.
+    *   **FR3.2.3: Progressive Muscle Relaxation:** Provide instructions and audio cues for progressive muscle relaxation.
+*   **FR3.3: Coping Strategies:** The chatbot shall offer evidence-based coping strategies for common mental health challenges (e.g., stress management, anxiety reduction, improving sleep).
+*   **FR3.4: Affirmations:** The chatbot shall provide positive affirmations to users.
 
-**4. Mood Tracking Integration (Optional):**
+**4. Resource Provision & Safety**
 
-*   **FR4.1:** The chatbot shall integrate with a basic mood tracking system (user-provided or built-in).
-*   **FR4.2:** The chatbot shall allow users to log their mood on a daily basis.
-*   **FR4.3:** The chatbot shall analyze mood data to identify trends and patterns.
-*   **FR4.4:** The chatbot shall provide personalized insights and recommendations based on mood data.
+*   **FR4.1: Crisis Support Information:** The chatbot shall provide readily accessible information about crisis hotlines and mental health resources (e.g., Suicide Prevention Lifeline, Crisis Text Line).
+*   **FR4.2: Referral to Professionals:** If a user expresses a serious concern or indicates a need for professional help, the chatbot shall provide information on how to find a therapist or counselor.  The chatbot *shall not* provide diagnoses or treatment recommendations.
+*   **FR4.3: Safety Protocol:** The chatbot shall incorporate a safety protocol to detect and respond to users expressing suicidal thoughts or intent to harm themselves. This protocol shall involve immediate provision of crisis resources and, if possible, contacting emergency services (with user consent where legally permissible).
 
-**5. Platform & Security:**
+**5. Personalization & Data Management**
 
-*   **FR5.1:** The chatbot shall be accessible via a web interface and a mobile application (iOS and Android).
-*   **FR5.2:** All user data and conversations shall be encrypted using industry-standard encryption protocols (e.g., TLS/SSL).
-*   **FR5.3:** The chatbot shall comply with relevant data privacy regulations (e.g., GDPR, CCPA).
-*   **FR5.4:** The chatbot shall implement robust security measures to prevent unauthorized access and data breaches.
+*   **FR5.1: User Profile:** The chatbot shall create and maintain a user profile, storing information such as user preferences, mood tracking data, and conversation history (with user consent).
+*   **FR5.2: Personalized Recommendations:** Based on user data and preferences, the chatbot shall provide personalized recommendations for relaxation techniques, coping strategies, and resources.
+*   **FR5.3: Data Privacy & Security:** The chatbot shall comply with all relevant data privacy regulations (e.g., GDPR, CCPA) and implement robust security measures to protect user data.  Data encryption both in transit and at rest is required.
 
-**6. Analytics & Reporting:**
+**6. Analytics & Reporting**
 
-*   **FR6.1:** The chatbot shall track user engagement metrics, including:
-    *   **FR6.1.1:** Number of active users.
-    *   **FR6.1.2:** Conversation duration.
-    *   **FR6.1.3:** Frequency of use.
-    *   **FR6.1.4:**  Most frequently asked questions.
-*   **FR6.2:** The chatbot shall generate reports on user engagement and identify areas for improvement.
-*   **FR6.3:**  Data collected for analytics shall be anonymized to protect user privacy.
+*   **FR6.1: Usage Tracking:** The chatbot shall track key usage metrics, including:
+    *   **FR6.1.1: Number of Users:** Total number of users interacting with the chatbot.
+    *   **FR6.1.2: Session Duration:** Average length of user sessions.
+    *   **FR6.1.3: Feature Usage:** Frequency of use of different features (e.g., mood tracking, relaxation techniques).
+    *   **FR6.1.4: Intent Recognition Accuracy:**  Track the accuracy of intent recognition over time.
+*   **FR6.2: Reporting Dashboard:** A reporting dashboard shall be provided to administrators to visualize usage data and identify trends.
 
-**7. Error Handling & Fallback:**
-
-*   **FR7.1:** The chatbot shall gracefully handle unexpected user input or errors.
-*   **FR7.2:** The chatbot shall provide helpful error messages to the user.
-*   **FR7.3:**  If the chatbot is unable to understand a user’s request, it shall offer alternative options or direct the user to a human support professional (if available).
+---
