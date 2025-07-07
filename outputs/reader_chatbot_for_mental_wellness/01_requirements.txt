@@ -1,0 +1,40 @@
+**Original Client Requirements**
+
+The Reader Chatbot for Mental Wellness is envisioned as an AI-powered chatbot designed to provide support and guidance to users struggling with mental health challenges. Users will be able to interact with the chatbot through a text-based interface. The chatbot should be able to understand and respond to a wide range of mental health-related queries, offer coping mechanisms, and direct users to relevant resources. It should be empathetic, non-judgmental, and prioritize user safety. The chatbot should be able to identify potential crisis situations and provide immediate support or connect users with emergency services.  It needs to be able to handle a variety of user inputs, including open-ended questions, specific concerns, and expressions of emotion.  The chatbot should also be able to track user interactions and provide personalized recommendations based on their history.  It’s important that the chatbot is easy to use and accessible to a broad audience, including those with limited technical skills.  The chatbot should be regularly updated with new information and resources.  Finally, the chatbot should be compliant with all relevant privacy regulations.
+
+**Refined Functional Requirements**
+
+**1. User Interaction & Input Handling**
+
+*   **FR1.1: Text Input:** The chatbot shall accept text-based input from users via a text input field.
+*   **FR1.2: Natural Language Understanding (NLU):** The chatbot shall utilize an NLU engine to interpret user input, identifying intent and relevant entities (e.g., emotions, symptoms, concerns).
+*   **FR1.3: Input Validation:** The chatbot shall validate user input to prevent malicious or inappropriate content.  Invalid input shall result in a helpful error message (e.g., "Please rephrase your question," "I'm sorry, I didn't understand.").
+*   **FR1.4: Sentiment Analysis:** The chatbot shall perform sentiment analysis on user input to detect the user's emotional state (positive, negative, neutral).
+*   **FR1.5: Multi-Turn Conversations:** The chatbot shall maintain context across multiple turns of conversation, allowing for follow-up questions and clarifications.
+
+**2. Chatbot Responses & Content Delivery**
+
+*   **FR2.1: Empathetic Responses:** The chatbot shall provide responses that demonstrate empathy and understanding towards the user's situation.  Response templates should be reviewed and updated regularly to ensure they remain appropriate and sensitive.
+*   **FR2.2: Information Provision:** The chatbot shall provide accurate and relevant information about mental health topics, including common conditions, coping mechanisms, and self-care strategies. Information sources must be reputable and regularly updated.
+*   **FR2.3: Coping Mechanism Suggestions:** The chatbot shall offer personalized coping mechanism suggestions based on the user’s identified needs and emotional state.  Suggestions should be categorized (e.g., relaxation techniques, mindfulness exercises, problem-solving strategies).
+*   **FR2.4: Resource Referral:** The chatbot shall provide links and contact information for relevant mental health resources, including crisis hotlines, support groups, and mental health professionals.  Resources should be categorized by type and location.
+*   **FR2.5: Crisis Detection:** The chatbot shall employ a crisis detection algorithm to identify users expressing suicidal ideation, self-harm intentions, or other signs of distress.
+
+**3. User Tracking & Personalization**
+
+*   **FR3.1: Conversation History:** The chatbot shall maintain a record of each user’s conversation history.
+*   **FR3.2: User Profile:** The chatbot shall create and maintain a user profile, storing information such as user preferences, identified needs, and past interactions. (With explicit user consent and adhering to privacy regulations).
+*   **FR3.3: Personalized Recommendations:** Based on the user profile and conversation history, the chatbot shall provide personalized recommendations for coping mechanisms, resources, and future interactions.
+*   **FR3.4:  Progress Tracking (Optional):** The chatbot may optionally allow users to track their progress in implementing coping mechanisms (e.g., through self-reporting).
+
+**4. System & Security**
+
+*   **FR4.1: Data Privacy:** The chatbot shall comply with all relevant data privacy regulations (e.g., GDPR, HIPAA). User data shall be encrypted and stored securely.
+*   **FR4.2:  Accessibility:** The chatbot interface shall be accessible to users with disabilities, adhering to WCAG guidelines.
+*   **FR4.3:  Regular Updates:** The chatbot’s NLU engine, knowledge base, and security protocols shall be regularly updated to ensure accuracy, effectiveness, and security.
+*   **FR4.4:  Logging & Monitoring:** The chatbot shall log all user interactions and system events for monitoring and auditing purposes.
+
+**5.  Emergency Protocol**
+
+*   **FR5.1: Crisis Intervention:** Upon detecting a crisis situation, the chatbot shall immediately provide the user with contact information for a crisis hotline or emergency services.
+*   **FR5.2:  Escalation Protocol:** The chatbot shall have a defined escalation protocol for handling crisis situations, involving human intervention if necessary. (This requires integration with a human support system).
