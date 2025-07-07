@@ -1,0 +1,48 @@
+**Original Client Requirements**
+
+The client envisions a chatbot that’s… well, *weird*. Not in a creepy way, but in a delightfully odd, slightly unsettling, and ultimately helpful way for mental wellness. It shouldn’t be a typical, supportive chatbot. It should offer unconventional advice, use bizarre metaphors, and generally be a bit of a strange companion. The goal is to break through the usual platitudes and offer a fresh, memorable perspective on mental health challenges. It needs to be able to handle a range of topics – anxiety, sadness, loneliness, self-doubt – but with a very specific, quirky tone.  It should also be able to detect when the user is *really* struggling and offer resources (links to support organizations, etc.) without being overly forceful.  The chatbot should have a distinct personality, perhaps a slightly cynical, observational, or even a touch dramatic persona.  It needs to be able to remember past conversations to some extent, so it can build a (weird) rapport with the user.  Finally, it should be able to generate random, slightly unsettling but ultimately thought-provoking prompts or “exercises” to help the user explore their feelings.  Think less “motivational speaker” and more “eccentric therapist with a penchant for surrealism.”
+
+**Refined Functional Requirements**
+
+**1. Overall System Requirements**
+
+*   **FR1.1 System Name:** WeirdWellBot
+*   **FR1.2 Platform:** Web application and mobile app (iOS and Android)
+*   **FR1.3 Security:**  All user data must be encrypted both in transit and at rest. Compliance with GDPR and relevant privacy regulations is required.
+*   **FR1.4 Scalability:** The system should be able to handle a minimum of 1000 concurrent users without performance degradation.
+
+**2. Chatbot Functionality**
+
+*   **FR2.1 Natural Language Understanding (NLU):**
+    *   **FR2.1.1 Intent Recognition:** The chatbot must accurately identify user intents related to common mental wellness topics (e.g., anxiety, depression, loneliness, self-doubt, stress).  Accuracy target: 85% on a test set of 500 user utterances.
+    *   **FR2.1.2 Entity Extraction:** The chatbot must extract relevant entities from user input, such as emotions (e.g., “sad,” “angry,” “frustrated”), activities (e.g., “working,” “sleeping,” “eating”), and specific situations (e.g., “job interview,” “relationship breakup”).
+*   **FR2.2 Dialogue Management:**
+    *   **FR2.2.1 Response Generation:** The chatbot must generate responses that align with its defined personality (e.g., cynical, observational, dramatic). Responses should be varied and avoid repetitive phrasing.
+    *   **FR2.2.2 Contextual Awareness:** The chatbot must maintain context throughout the conversation, remembering previous turns and user preferences.  A conversation history of at least 10 turns should be maintained.
+    *   **FR2.2.3  "Weirdness" Factor:** The chatbot must incorporate elements of surprise, unconventional metaphors, and slightly unsettling observations into its responses.  A scoring system (1-5, 5 being most weird) should be implemented to ensure the desired level of strangeness is achieved.
+*   **FR2.3 Topic Handling:**
+    *   **FR2.3.1 Anxiety:** When the user expresses anxiety, the chatbot should offer responses that acknowledge the feeling but avoid simplistic reassurance.  Examples: “Anxiety is a tiny, insistent gremlin. Let’s see if we can lure it out for a dance.” or “Your brain is currently running a very complicated, slightly panicked algorithm.  Let’s try to debug it.”
+    *   **FR2.3.2 Sadness:** When the user expresses sadness, the chatbot should offer responses that validate the emotion without dwelling on it. Examples: “Sadness is a perfectly acceptable shade of gray.  Let’s find a slightly brighter one.” or “It’s okay to feel like a wilted houseplant.  Let’s see if we can find some sunlight.”
+    *   **FR2.3.3 Loneliness:** When the user expresses loneliness, the chatbot should offer responses that acknowledge the feeling and suggest ways to combat it, but in a quirky way. Examples: “Loneliness is like a single sock in the dryer.  It’s unsettling. Let’s try to find its mate.” or “You’re a star, even if you’re currently orbiting alone.”
+    *   **FR2.3.4 Self-Doubt:** When the user expresses self-doubt, the chatbot should offer responses that challenge negative thoughts in a gentle, slightly sarcastic manner. Examples: “Your brain is clearly trying to sabotage you.  Let’s give it a stern talking-to.” or “You’re probably overestimating how much you suck.  Just kidding… mostly.”
+*   **FR2.4 Resource Provision:**
+    *   **FR2.4.1 Crisis Detection:** The chatbot must be able to detect signs of a mental health crisis (e.g., suicidal ideation, self-harm).
+    *   **FR2.4.2 Resource Linking:**  If a crisis is detected, the chatbot must immediately provide links to relevant crisis support resources (e.g., suicide prevention hotline, mental health organizations).  A disclaimer stating that the chatbot is not a substitute for professional help must be displayed.
+
+**3. Memory and Personalization**
+
+*   **FR3.1 Conversation History:** The chatbot must maintain a record of the user’s previous conversations, allowing it to refer back to past topics and user preferences.
+*   **FR3.2 User Profile:** The chatbot must store basic user information (e.g., name, preferred communication style) to personalize the interaction.
+*   **FR3.3  "Weirdness" Preference:** The chatbot should allow the user to adjust the level of "weirdness" in its responses (e.g., a slider from "Mildly Peculiar" to "Existentially Terrifying").
+
+**4.  Random Prompt Generation**
+
+*   **FR4.1 Prompt Variety:** The chatbot must generate a diverse range of random prompts and exercises designed to encourage self-reflection and emotional exploration.
+*   **FR4.2 Prompt Categories:** Prompts should be categorized (e.g., “Surreal Scenario,” “Philosophical Question,” “Absurd Observation”).
+*   **FR4.3 Prompt Frequency:** Prompts should be offered periodically (e.g., once per session) or on user request.
+
+**5.  Testing**
+
+*   **FR5.1 Unit Testing:** Individual components of the chatbot (e.g., NLU engine, dialogue manager) must be thoroughly unit tested.
+*   **FR5.2 Integration Testing:** The chatbot’s components must be integrated and tested as a whole.
+*   **FR5.3 User Acceptance Testing (UAT):**  A group of users must test the chatbot to ensure it meets their needs and expectations.
