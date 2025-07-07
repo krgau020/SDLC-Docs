@@ -1,53 +1,53 @@
-**Original Client Requirements**
+## **Original Client Requirements**
 
-The client wants to create a chatbot that can help people with their mental wellness. It should be able to answer basic questions about mental health, offer coping mechanisms, and provide a safe space for users to talk about their feelings. The chatbot should be available 24/7 and easy to use. It needs to be empathetic and non-judgmental.  It should also be able to recognize when a user is in crisis and offer resources for immediate help.  Ideally, it would learn from user interactions to provide more personalized support over time.  There should be options for users to set goals and track their progress.  Integration with existing mental health platforms would be a plus.  The chatbot should be HIPAA compliant to ensure user privacy and data security.  Finally, the client wants to measure the chatbot’s effectiveness through user satisfaction surveys and tracking key metrics like session duration and frequency of use.
+## **Refined Functional Requirements**
 
-**Refined Functional Requirements**
+**1. Overall Goals & Objectives:**
 
-**1. User Interface & Interaction**
+*   **FR1.1 – Core Functionality:** The chatbot shall provide 24/7 access to mental wellness support and resources.
+*   **FR1.2 – User Support:** The chatbot shall be designed to be user-friendly and accessible to individuals with varying levels of technical proficiency.
+*   **FR1.3 – Empathy & Tone:** The chatbot shall communicate in a friendly, empathetic, and non-judgmental tone.
+*   **FR1.4 – Privacy & Security:** The chatbot shall adhere to all relevant data privacy regulations (e.g., GDPR, HIPAA – depending on target audience and location) and implement robust security measures to protect user data. Data encryption both in transit and at rest is required.
+*   **FR1.5 – Effectiveness Measurement:** The system shall incorporate mechanisms to track and measure the chatbot’s effectiveness in supporting user mental wellness (e.g., user satisfaction surveys, session duration, resource utilization).
 
-*   **FR1.1: Chatbot Availability:** The chatbot shall be accessible 24 hours a day, 7 days a week via a web interface and a mobile application (iOS and Android).
-*   **FR1.2: User Authentication (Optional):** The system shall provide an optional user authentication mechanism (e.g., email/password, social login) to allow for personalized data storage and progress tracking.  If authentication is not used, all data will be anonymized.
-*   **FR1.3: Input Method:** The chatbot shall support text-based input for user interactions.
-*   **FR1.4: Response Time:** The chatbot shall respond to user input within 3 seconds, on average.
-*   **FR1.5:  Interface Design:** The chatbot interface shall be clean, intuitive, and accessible, adhering to WCAG 2.1 AA accessibility guidelines.  Color schemes should be calming and visually appealing.
+**2. User Interaction & Conversation Flow:**
 
-**2. Core Functionality – Mental Wellness Support**
+*   **FR2.1 – Initial Greeting:** The chatbot shall initiate a conversation with a welcoming and informative greeting, clearly stating its purpose and capabilities.
+*   **FR2.2 – Topic Identification:** The chatbot shall be able to identify the user’s current emotional state and topic of concern through natural language processing (NLP).  This includes recognizing keywords, sentiment analysis, and potentially, topic modeling.
+*   **FR2.3 – Open-Ended Questions:** The chatbot shall utilize open-ended questions to encourage users to elaborate on their feelings and experiences.
+*   **FR2.4 – Response Variety:** The chatbot shall provide a diverse range of responses, avoiding repetitive or robotic phrasing.  Responses should be tailored to the user’s input.
+*   **FR2.5 – Clarification Requests:** If the chatbot’s understanding of the user’s needs is unclear, it shall proactively request clarification.
+*   **FR2.6 – Escalation Protocol:** The chatbot shall have a clearly defined escalation protocol to transfer the user to a human mental health professional or crisis hotline when:
+    *   The user expresses suicidal ideation or intent.
+    *   The user exhibits signs of severe distress or a mental health crisis.
+    *   The chatbot is unable to adequately address the user’s needs.
 
-*   **FR2.1: Information Provision:** The chatbot shall provide accurate and evidence-based information on common mental health topics, including (but not limited to) anxiety, depression, stress management, and mindfulness.  Information sources must be regularly updated and validated.
-*   **FR2.2: Coping Mechanism Suggestions:** The chatbot shall offer a library of coping mechanisms (e.g., breathing exercises, grounding techniques, journaling prompts) categorized by need (e.g., immediate stress relief, long-term anxiety management).
-*   **FR2.3: Mood Tracking:** The chatbot shall allow users to log their mood daily, providing a visual representation of their emotional trends over time.
-*   **FR2.4: Goal Setting:** The chatbot shall enable users to set personalized mental wellness goals (e.g., “Meditate for 10 minutes daily,” “Practice gratitude journaling three times a week”).
-*   **FR2.5: Progress Tracking:** The chatbot shall track user progress towards their goals and provide motivational feedback.
+**3. Content & Information Provision:**
 
-**3. Crisis Intervention & Resource Provision**
+*   **FR3.1 – Mental Health Information:** The chatbot shall provide accurate and evidence-based information about various mental health conditions (e.g., anxiety, depression, stress, PTSD).
+*   **FR3.2 – Coping Strategies:** The chatbot shall offer a range of coping strategies and techniques (e.g., mindfulness exercises, relaxation techniques, cognitive reframing) based on the user’s needs.
+*   **FR3.3 – Resource Directory:** The chatbot shall maintain a directory of relevant mental health resources, including:
+    *   Crisis hotlines (e.g., Suicide Prevention Lifeline, Crisis Text Line).
+    *   Mental health organizations (e.g., NAMI, Mental Health America).
+    *   Therapist directories.
+*   **FR3.4 – Personalized Recommendations:** Based on user input and tracked mood data (with user consent), the chatbot shall provide personalized recommendations for resources and coping strategies.
 
-*   **FR3.1: Crisis Detection:** The chatbot shall utilize Natural Language Processing (NLP) to detect keywords and phrases indicative of a mental health crisis (e.g., suicidal ideation, self-harm).
-*   **FR3.2: Immediate Support:** Upon detecting a potential crisis, the chatbot shall immediately offer supportive messages and resources, including:
-    *   **FR3.2.1:**  National Suicide Prevention Lifeline number (988).
-    *   **FR3.2.2:**  Crisis Text Line number.
-    *   **FR3.2.3:**  Local mental health services directory.
-*   **FR3.3:  Safety Plan Integration (Optional):** If a user has previously created a safety plan, the chatbot shall allow them to access and review it.
-*   **FR3.4:  Escalation Protocol:** The chatbot shall have a clearly defined escalation protocol for transferring users to a human mental health professional when necessary.
+**4. Mood Tracking & Analysis (Optional - Phase 2):**
 
-**4. Personalization & Learning**
+*   **FR4.1 – Mood Logging:** The chatbot shall allow users to log their mood on a regular basis (e.g., daily, weekly).
+*   **FR4.2 – Mood Visualization:** The chatbot shall provide a visual representation of the user’s mood trends over time.
+*   **FR4.3 – Pattern Identification:** The chatbot shall identify potential patterns in the user’s mood and provide insights (with user consent).
 
-*   **FR4.1: User Profile:** The chatbot shall maintain a user profile (if authentication is enabled) storing information such as preferred coping mechanisms, goals, and mood tracking history.
-*   **FR4.2: Adaptive Responses:** The chatbot shall adapt its responses based on user history and expressed needs, providing more relevant suggestions and information over time. (This will be implemented using a machine learning model).
-*   **FR4.3:  Preference Learning:** The chatbot shall learn user preferences for communication style (e.g., formal vs. informal) through implicit feedback (e.g., engagement with specific responses).
+**5. Technical Requirements:**
 
-**5. Data Security & Compliance**
+*   **FR5.1 – Platform Compatibility:** The chatbot shall be accessible via multiple platforms (e.g., web, mobile app, messaging platforms – e.g., Facebook Messenger, WhatsApp).
+*   **FR5.2 – NLP Engine:** The chatbot shall utilize a robust NLP engine for natural language understanding and generation.
+*   **FR5.3 – Database:** The chatbot shall utilize a secure database to store user data (with appropriate encryption and access controls).
+*   **FR5.4 – API Integrations:** The chatbot shall integrate with relevant APIs for accessing mental health resources and data.
 
-*   **FR5.1: HIPAA Compliance:** The chatbot shall be designed and implemented in compliance with HIPAA regulations to protect user privacy and data security.
-*   **FR5.2: Data Encryption:** All user data shall be encrypted both in transit and at rest.
-*   **FR5.3: Audit Logging:** The system shall maintain detailed audit logs of all user interactions and system events.
+**6. Testing & Quality Assurance:**
 
-**6. Measurement & Reporting**
-
-*   **FR6.1: User Satisfaction Surveys:** The chatbot shall periodically administer user satisfaction surveys to gather feedback on its effectiveness and usability.
-*   **FR6.2: Key Metric Tracking:** The system shall track key metrics, including:
-    *   **FR6.2.1:** Session duration.
-    *   **FR6.2.2:** Frequency of use.
-    *   **FR6.2.3:**  Number of coping mechanisms utilized.
-    *   **FR6.2.4:**  Crisis intervention requests.
-*   **FR6.3: Reporting Dashboard:** A reporting dashboard shall be provided to visualize key metrics and identify areas for improvement.
+*   **FR6.1 – Unit Testing:** Individual components of the chatbot shall undergo thorough unit testing.
+*   **FR6.2 – Integration Testing:** The integration of different components shall be tested to ensure seamless functionality.
+*   **FR6.3 – User Acceptance Testing (UAT):** The chatbot shall be tested by a representative group of users to ensure it meets their needs and expectations.
+*   **FR6.4 – Security Testing:** Regular security testing shall be conducted to identify and address potential vulnerabilities.
