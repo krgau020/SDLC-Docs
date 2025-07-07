@@ -1,0 +1,63 @@
+## Original Client Requirements
+
+## Refined Functional Requirements
+
+**1. Overall Goals**
+
+*   **FR1.1:** The chatbot shall provide 24/7 access to mental wellness support and resources.
+*   **FR1.2:** The chatbot shall foster a safe, supportive, and non-judgmental environment for users.
+*   **FR1.3:** The chatbot shall prioritize user privacy and data security, adhering to all relevant regulations (e.g., HIPAA if applicable).
+*   **FR1.4:** The chatbot shall provide information and guidance, *not* specific medical advice.  It will clearly state its limitations and encourage users to consult with qualified professionals for diagnosis and treatment.
+
+**2. User Interaction & Conversation Flow**
+
+*   **FR2.1:** The chatbot shall initiate a conversation with a welcoming greeting and an explanation of its purpose.
+*   **FR2.2:** The chatbot shall support natural language understanding (NLU) to interpret user input, including variations in phrasing and intent.
+*   **FR2.3:** The chatbot shall maintain context throughout the conversation, remembering previous interactions and user preferences.
+*   **FR2.4:** The chatbot shall offer a menu of topics for users to explore, including:
+    *   **FR2.4.1:** Anxiety Management
+    *   **FR2.4.2:** Depression Support
+    *   **FR2.4.3:** Stress Reduction
+    *   **FR2.4.4:** Loneliness & Isolation
+    *   **FR2.4.5:** Mindfulness & Relaxation
+    *   **FR2.4.6:** Positive Affirmations & Encouragement
+*   **FR2.5:** The chatbot shall provide empathetic responses to user statements, acknowledging their feelings and validating their experiences.
+*   **FR2.6:** The chatbot shall offer a range of response types, including text, images, and links to external resources.
+
+**3. Distress Detection & Support**
+
+*   **FR3.1:** The chatbot shall utilize sentiment analysis to detect signs of distress (e.g., suicidal ideation, self-harm).
+*   **FR3.2:** Upon detecting potential distress, the chatbot shall:
+    *   **FR3.2.1:** Immediately offer support and reassurance.
+    *   **FR3.2.2:** Provide immediate access to crisis resources, including:
+        *   **FR3.2.2.1:** National Suicide Prevention Lifeline (1-800-273-8255)
+        *   **FR3.2.2.2:** Crisis Text Line (Text HOME to 741741)
+        *   **FR3.2.2.3:** Local mental health resources (determined based on user location – see FR6.2)
+    *   **FR3.2.3:**  Clearly state that it is not a substitute for professional help.
+*   **FR3.3:** The chatbot shall log all instances of distress detection and resource provision for monitoring and improvement purposes (while maintaining user privacy).
+
+**4. Mindfulness & Relaxation Techniques**
+
+*   **FR4.1:** The chatbot shall offer guided mindfulness exercises (e.g., breathing exercises, body scans) with clear, step-by-step instructions.
+*   **FR4.2:** The chatbot shall provide access to relaxation techniques (e.g., progressive muscle relaxation, visualization).
+*   **FR4.3:** The chatbot shall allow users to customize the duration and frequency of these exercises.
+
+**5. Personalization & Learning**
+
+*   **FR5.1:** The chatbot shall maintain a user profile to store preferences (e.g., preferred topics, exercise duration).
+*   **FR5.2:** The chatbot shall learn from user interactions to provide more relevant and personalized support over time (using machine learning techniques – to be determined).
+*   **FR5.3:** The chatbot shall allow users to provide feedback on its responses and suggestions.
+
+**6. System & Integration**
+
+*   **FR6.1:** The chatbot shall be accessible via a web interface and potentially mobile app (future enhancement).
+*   **FR6.2:** The chatbot shall integrate with location services to provide relevant local mental health resources (e.g., therapists, support groups).  This requires user consent.
+*   **FR6.3:** The chatbot shall integrate with analytics platforms to track usage patterns, conversation topics, and user feedback.
+*   **FR6.4:** The chatbot shall utilize a secure database to store user data, adhering to privacy best practices.
+
+**7.  Reporting & Analytics**
+
+*   **FR7.1:** The system shall track the number of active users.
+*   **FR7.2:** The system shall track the frequency of use of different features (e.g., mindfulness exercises, crisis resources).
+*   **FR7.3:** The system shall track the types of conversations users are having with the chatbot.
+*   **FR7.4:** The system shall provide reports on user sentiment and distress levels. (Aggregated and anonymized data only).
